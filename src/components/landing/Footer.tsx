@@ -1,8 +1,10 @@
+
 import Link from 'next/link';
 import Logo from '@/components/icons/Logo';
 import { Separator } from '@/components/ui/separator';
 
 export default function Footer() {
+  const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdiULMdn2EE6n8BZjejdhUcLa3xrrEe2gJoQ-fY-4nbBBMHBg/viewform?usp=header";
   return (
     <footer className="border-t border-border/40 bg-background">
       <div className="container mx-auto px-4 py-12 md:px-6">
@@ -18,9 +20,9 @@ export default function Footer() {
           <div>
             <h3 className="mb-3 font-headline text-lg font-semibold text-primary">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="#mission" className="text-foreground/70 hover:text-primary">Our Mission</Link></li>
-              <li><Link href="#features" className="text-foreground/70 hover:text-primary">How It Works</Link></li>
-              <li><Link href="#join" className="text-foreground/70 hover:text-primary">Join Now</Link></li>
+              <li><Link href="/about/our-vision#mission" className="text-foreground/70 hover:text-primary">Our Mission</Link></li>
+              <li><Link href="/about/our-vision#features" className="text-foreground/70 hover:text-primary">How It Works</Link></li>
+              <li><Link href={googleFormUrl} className="text-foreground/70 hover:text-primary">Join Now</Link></li>
               <li><Link href="#" className="text-foreground/70 hover:text-primary">Privacy Policy</Link></li>
             </ul>
           </div>
