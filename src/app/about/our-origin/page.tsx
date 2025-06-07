@@ -4,6 +4,7 @@ import Footer from '@/components/landing/Footer';
 import { Separator } from '@/components/ui/separator';
 import SectionLayout from '@/components/ui/SectionLayout';
 import { Users, Sparkles, BookOpenText, HeartHandshake } from 'lucide-react';
+import Link from 'next/link';
 
 export default function OurOriginPage() {
   return (
@@ -23,7 +24,7 @@ export default function OurOriginPage() {
           <SectionLayout id="our-story-intro" className="py-0">
             <div className="max-w-3xl mx-auto space-y-6 text-lg text-foreground/90 leading-relaxed">
               <p className="text-center">
-                Heyesa began not with a business plan, but with a heartfelt question: in an age of unprecedented digital connectivity, why do so many of us feel more isolated than ever? We, two software engineers, found ourselves disillusioned by technology's role in deepening this divide. We craved something more, something real. We envisioned a future where technology could be a bridge, not a barrier—a tool with a soul, designed to place community at its very center.
+                In 2025, Heyesa began not with a business plan, but with a heartfelt question: in an age of unprecedented digital connectivity, why do so many of us feel more isolated than ever? We, two software engineers, found ourselves disillusioned by technology's role in deepening this divide. We craved something more, something real. We envisioned a future where technology could be a bridge, not a barrier—a tool with a soul, designed to place community at its very center. Our mission became clear: to leverage technology thoughtfully, not to replace human interaction, but to enhance it, fostering genuine bonds and restoring what makes life truly worth living—deep human connection.
               </p>
             </div>
           </SectionLayout>
@@ -40,6 +41,9 @@ export default function OurOriginPage() {
                 </div>
                 <p className="text-foreground/90 leading-relaxed">
                   Mark's experiences at Burning Man illuminated a profound truth: the deepest human fulfillment often springs from selfless contribution. He witnessed the magic of a community built on "gifting"—freely offering positive experiences and support without expectation of monetary return. This sparked a powerful idea: what if we could build a platform that empowers individuals to share their unique gifts and talents, meeting the genuine needs of those around them? A space to cultivate generosity and weave a tapestry of mutual support, enriching lives and fostering long-term human happiness.
+                </p>
+                <p className="text-foreground/80 leading-relaxed mt-4">
+                  Connect with Mark on <a href="https://www.facebook.com/markbrannan" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline hover:text-accent/80 transition-colors">Facebook</a>.
                 </p>
               </div>
               <div className="bg-primary/5 p-8 rounded-lg shadow-xl">
@@ -85,7 +89,7 @@ export default function OurOriginPage() {
                 </div>
                 <h2 className="font-headline text-3xl font-bold text-primary mb-8 sm:text-4xl">Our Unwavering Commitment</h2>
                 <p className="text-lg text-foreground/90 leading-relaxed">
-                    Heyesa is more than an app; it's our pledge to leverage technology not for its own sake, but as a humble servant to humanity's deepest need: to connect, to belong, and to flourish together. If we’re not helping people live more connected, meaningful lives, we have no reason to exist.
+                    Heyesa is more than an app; it's our pledge to leverage technology not for its own sake, but as a humble servant to humanity's deepest need: to connect, to belong, and to flourish together. We are driven by a single, bright north star—long-term human happiness. If we’re not helping people live more connected, meaningful lives, we have no reason to exist.
                 </p>
             </div>
           </SectionLayout>
