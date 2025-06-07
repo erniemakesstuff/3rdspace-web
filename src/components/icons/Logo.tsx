@@ -8,7 +8,9 @@ export default function Logo() {
         fill="currentColor"
         className="h-8 w-8"
       >
-        <path d="M12 2C9.24 2 7 4.24 7 7c0 2.21 1.26 4.11 3 5.19V19c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-6.81c1.74-1.08 3-2.98 3-5.19 0-2.76-2.24-5-5-5zm0 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm-1 12v-2h2v2H11z"/>
+        {/* Jar of Oil Icon - Inspired by 2 Kings 4 */}
+        {/* Simplified representation: a basic jar/urn shape */}
+        <path d="M7 2C6.44772 2 6 2.44772 6 3V4H5C4.44772 4 4 4.44772 4 5V7H3C2.44772 7 2 7.44772 2 8V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V8C22 7.44772 21.5523 7 21 7H20V5C20 4.44772 19.5523 4 19 4H18V3C18 2.44772 17.5523 2 17 2H7Z M8 4H16V5H8V4ZM6 6H18V7H6V6ZM4 9H20V19C20 19.5523 19.5523 20 19 20H5C4.44772 20 4 19.5523 4 19V9Z" />
       </svg>
       <span className="text-2xl font-headline font-semibold">
         Heyesa
