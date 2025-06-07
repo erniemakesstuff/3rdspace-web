@@ -12,7 +12,7 @@ export default function HeroSection() {
             Reconnect. Rebuild. Belong.
           </h1>
           <p className="text-lg text-foreground/80 md:text-xl">
-            Tired of superficial connections? Heyesa helps you find and build genuine community in your local third spaces. Offer your skills, find support, and tackle shared goals together.
+            Tired of superficial connections? Heyesa helps you find and build genuine community in your favorite local spots and the digital communities that bring people together. Offer your skills, find support, and tackle shared goals together.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">

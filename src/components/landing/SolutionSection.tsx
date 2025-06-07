@@ -20,10 +20,10 @@ export default function SolutionSection() {
             Our Solution: Inverting the Model
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-foreground/90">
-            We propose inverting the model of our convenience-oriented culture; our fast-food, DoorDash way of relationships. Welcome to Third Space Connector.
+            We propose inverting the model of our convenience-oriented culture; our fast-food, DoorDash way of relationships. Welcome to Heyesa.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-foreground/90">
-            Instead of seeking an application designed to “meet our needs,” users join to offer their unique services or values. We make the convenience application a facilitator, not the primary coordinator. The coordinator is driven by the physical locations themselves. This removes the perverse incentive to “keep users engaged on the app.”
+            Instead of seeking an application designed to “meet our needs,” users join to offer their unique services or values. We make the convenience application a facilitator, not the primary coordinator. The coordinator is driven by the physical locations themselves and their digital extensions. This removes the perverse incentive to “keep users engaged on the app.”
           </p>
           <ul className="mt-6 space-y-3 text-lg text-foreground/90">
             <li className="flex items-start">
@@ -36,7 +36,7 @@ export default function SolutionSection() {
             </li>
             <li className="flex items-start">
               <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-accent"></span>
-              Metrics focused on genuine connection and repeat engagement in third spaces.
+              Metrics focused on genuine connection and repeat engagement in local hubs and their associated digital communities.
             </li>
              <li className="flex items-start">
               <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-accent"></span>
@@ -44,7 +44,7 @@ export default function SolutionSection() {
             </li>
           </ul>
            <p className="mt-4 text-lg leading-relaxed text-foreground/90">
-            Our starting metric for launch: how often are users revisiting locations with other users? Are they visiting third spaces in an ongoing fashion? We aim to measure the quality of experience and community health, not just usage.
+            Our starting metric for launch: how often are users revisiting local hubs with other users? Are they visiting local hubs and engaging in their digital communities in an ongoing fashion? We aim to measure the quality of experience and community health, not just usage.
           </p>
         </div>
       </div>

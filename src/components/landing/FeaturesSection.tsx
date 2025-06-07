@@ -13,7 +13,7 @@ export default function FeaturesSection() {
     {
       icon: <BotMessageSquare className="h-10 w-10 text-primary" />,
       title: 'AI "Mutual Friend" Introductions',
-      description: 'Our AI acts as a friendly intermediary, making thoughtful introductions between users based on shared interests and needs within your third spaces.',
+      description: 'Our AI acts as a friendly intermediary, making thoughtful introductions between users based on shared interests and needs within your local spots and the digital communities around them.',
     },
     {
       icon: <ShieldCheck className="h-10 w-10 text-primary" />,
@@ -37,8 +37,8 @@ export default function FeaturesSection() {
     },
     {
       icon: <Handshake className="h-10 w-10 text-primary" />,
-      title: 'Third Spaces First',
-      description: 'We prioritize real-world locations. Connect with people in your local coffee shop, library, park, or community center.',
+      title: 'Focus on Local Hubs & Digital Connections',
+      description: 'We emphasize connecting in real-world local hubs and fostering supportive digital environments around them. Find and engage with people in your favorite coffee shop, library, park, or community center, and extend those connections online.',
     },
   ];
 

@@ -4,9 +4,9 @@ import Image from 'next/image';
 
 export default function DifferentiationSection() {
   const points = [
-    "Third spaces are the first-class actor in our application.",
+    "Local community hubs and their associated digital spaces are central to our application.",
     "We cater to users with a vested desire to build community, not to only have their personal desires satisfied.",
-    "Users are grouped by their specific third spaces (your coffee shop, your church) not broad geography.",
+    "Users are grouped by their specific local hubs (like your favorite coffee shop or community center) and the digital communities around them, not just broad geography.",
     "Artificial Intelligence (AI) is the “mutual friend” that makes introductions and guides conversations.",
     "AI matches people based on services-needs alignment to foster tangible collaboration.",
     "AI moderates discussions to ensure respectful dialogue and a safe environment.",

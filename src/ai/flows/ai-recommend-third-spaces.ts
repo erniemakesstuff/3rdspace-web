@@ -1,10 +1,10 @@
 'use server';
 /**
- * @fileOverview AI-powered Third Space Recommendation Flow.
+ * @fileOverview AI-powered Community Space Recommendation Flow.
  *
- * This file defines a Genkit flow that recommends third spaces to users based on their profile of needs and services.
+ * This file defines a Genkit flow that recommends community spaces and local hubs to users based on their profile of needs and services.
  *
- * - recommendThirdSpaces - A function that initiates the third space recommendation process.
+ * - recommendThirdSpaces - A function that initiates the community space recommendation process.
  * - RecommendThirdSpacesInput - The input type for the recommendThirdSpaces function.
  * - RecommendThirdSpacesOutput - The return type for the recommendThirdSpaces function.
  */
@@ -31,11 +31,11 @@ export type RecommendThirdSpacesInput = z.infer<typeof RecommendThirdSpacesInput
 const RecommendThirdSpacesOutputSchema = z.object({
   recommendations: z.array(
     z.object({
-      spaceName: z.string().describe('The name of the third space.'),
-      spaceDescription: z.string().describe('A brief description of the third space.'),
-      suitabilityReason: z.string().describe('Why this space is a good match for the user.'),
+      spaceName: z.string().describe('The name of the recommended community space or local hub.'),
+      spaceDescription: z.string().describe('A brief description of the community space or local hub.'),
+      suitabilityReason: z.string().describe('Why this community space or local hub is a good match for the user.'),
     })
-  ).describe('A list of recommended third spaces.'),
+  ).describe('A list of recommended community spaces or local hubs.'),
 });
 
 export type RecommendThirdSpacesOutput = z.infer<typeof RecommendThirdSpacesOutputSchema>;
@@ -50,14 +50,14 @@ const recommendThirdSpacesPrompt = ai.definePrompt({
   name: 'recommendThirdSpacesPrompt',
   input: {schema: RecommendThirdSpacesInputSchema},
   output: {schema: RecommendThirdSpacesOutputSchema},
-  prompt: `You are an AI assistant designed to recommend third spaces to users based on their needs, services and location.
+  prompt: `You are an AI assistant designed to recommend community spaces and local hubs to users based on their needs, services and location.
 
   Given the following information about the user:
   - Needs: {{{userNeeds}}}
   - Services: {{{userServices}}}
   - Location: {{{userLocation}}}
 
-  Recommend third spaces in their area that would be a good fit for them. Consider community centers, libraries, parks, social clubs, and other shared spaces.
+  Recommend community spaces and local hubs in their area that would be a good fit for them. Consider community centers, libraries, parks, social clubs, and other shared spaces.
   Explain why each space is a good match for the user, considering how their needs and services align with the space's purpose and activities. Prioritize local community improvement projects.
 
   Format your response as a JSON object with a "recommendations" array. Each object in the array should have the keys "spaceName", "spaceDescription", and "suitabilityReason".
