@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -22,11 +23,11 @@ import React, { useState, useEffect } from 'react';
 interface NavItemLink {
   name: string;
   href: string;
-  pageSpecific?: boolean; // For landing page section links
+  pageSpecific?: boolean; // For landing page section links or page-specific base paths
 }
 
 interface NavItemGroup {
-  name: string; // Name for the dropdown trigger e.g., "About"
+  name: string;
   isDropdown: true;
   links: NavItemLink[];
 }
@@ -34,35 +35,55 @@ interface NavItemGroup {
 type NavItem = NavItemLink | NavItemGroup;
 
 export default function Navbar() {
-  const [isLandingPage, setIsLandingPage] = useState(false);
+  const [currentPath, setCurrentPath] = useState('');
 
   useEffect(() => {
     // This check runs only on the client-side
-    setIsLandingPage(window.location.pathname === '/');
+    setCurrentPath(window.location.pathname);
   }, []);
 
 
   const navItems: NavItem[] = [
-    { name: 'Mission', href: '#mission', pageSpecific: true },
-    { name: 'Problem', href: '#problem', pageSpecific: true },
-    { name: 'Solution', href: '#solution', pageSpecific: true },
-    { name: 'Features', href: '#features', pageSpecific: true },
+    { name: 'Mission', href: '#mission', pageSpecific: true }, // Points to #mission on /about/our-vision
+    { name: 'Problem', href: '#problem', pageSpecific: true }, // Points to #problem on /about/our-vision
+    { name: 'Solution', href: '#solution', pageSpecific: true }, // Points to #solution on /about/our-vision
+    { name: 'Features', href: '#features', pageSpecific: true }, // Points to #features on /about/our-vision
     {
       name: 'About',
       isDropdown: true,
       links: [
         { name: 'About Us', href: '/about' },
         { name: 'Our Origin', href: '/about/our-origin' },
+        { name: 'Our Vision', href: '/about/our-vision' },
       ]
     },
   ];
 
   const getHref = (item: NavItemLink) => {
     if (item.pageSpecific) {
-      return isLandingPage ? item.href : `/${item.href}`;
+      // If on the new landing page (/), section links should point to the detailed vision page
+      if (currentPath === '/') {
+        return `/about/our-vision${item.href}`;
+      }
+      // If on the vision page itself, section links are direct hashes
+      if (currentPath === '/about/our-vision') {
+        return item.href;
+      }
+      // Otherwise (e.g., on /about or /about/our-origin), also point to vision page sections
+      return `/about/our-vision${item.href}`;
     }
     return item.href;
   };
+
+  const getJoinNowHref = () => {
+    if (currentPath === '/') {
+      return '#join'; // Join section on new landing page
+    }
+    if (currentPath === '/about/our-vision') {
+      return '#join'; // Join section on detailed vision page
+    }
+    return '/about/our-vision#join'; // Default to join section on detailed vision page
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -105,7 +126,7 @@ export default function Navbar() {
             }
           })}
           <Button asChild variant="default" size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground ml-4">
-            <Link href={isLandingPage ? "#join" : "/#join"}>Join Now</Link>
+            <Link href={getJoinNowHref()}>Join Now</Link>
           </Button>
         </nav>
         <div className="md:hidden">
@@ -127,15 +148,16 @@ export default function Navbar() {
               <nav className="flex flex-col space-y-1">
                 {navItems.map((item) => {
                   if ('isDropdown' in item && item.isDropdown) {
+                    // For mobile, list all dropdown items directly for easier tapping
                     return (
                       <React.Fragment key={item.name}>
-                        {/* Optional: Add a non-clickable header for the group if desired */}
-                        {/* <p className="text-sm font-semibold text-muted-foreground px-2 py-2">{item.name}</p> */}
+                        {/* Optional: Add a non-clickable header for the group */}
+                        {/* <p className="px-2 py-2 text-xs font-semibold uppercase text-muted-foreground">{item.name}</p> */}
                         {item.links.map(subItem => (
                           <SheetClose asChild key={subItem.name}>
                             <Link
                               href={getHref(subItem)}
-                              className="text-md font-medium text-foreground/80 transition-colors hover:text-primary py-2 px-2 block" // Indent or style as needed
+                              className="text-md font-medium text-foreground/80 transition-colors hover:text-primary py-2 px-2 block"
                             >
                               {subItem.name}
                             </Link>
@@ -159,7 +181,7 @@ export default function Navbar() {
                  <Separator className="my-2 bg-border/60" />
                 <SheetClose asChild>
                   <Button asChild variant="default" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full mt-2">
-                     <Link href={isLandingPage ? "#join" : "/#join"}>Join Now</Link>
+                     <Link href={getJoinNowHref()}>Join Now</Link>
                   </Button>
                 </SheetClose>
               </nav>
