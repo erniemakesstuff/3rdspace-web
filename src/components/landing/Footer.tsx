@@ -44,7 +44,7 @@ export default function Footer() {
               </li>
             </ul>
             <p className="mt-3 text-sm text-foreground/70">
-              Follow us on other social media for updates and community stories. (More links to be added)
+              Follow us on other social media for updates and community stories.
             </p>
           </div>
         </div>
