@@ -43,6 +43,7 @@ export default function Navbar() {
 
 
   const navItems: NavItem[] = [
+    { name: 'Features', href: '#features', pageSpecific: true },
     {
       name: 'About',
       isDropdown: true,
@@ -56,22 +57,23 @@ export default function Navbar() {
 
   const getHref = (item: NavItemLink) => {
     if (item.pageSpecific) {
-      if (currentPath === '/') {
+      if (currentPath === '/') { // When on new landing page
         return `/about/our-vision${item.href}`;
       }
-      if (currentPath === '/about/our-vision') {
+      if (currentPath === '/about/our-vision') { // When on the vision page itself
         return item.href;
       }
+      // For other pages like /about, /about/our-origin, link to the vision page's section
       return `/about/our-vision${item.href}`;
     }
     return item.href;
   };
 
   const getJoinNowHref = () => {
-    if (currentPath === '/') {
-      return '/about/our-vision#join';
+    if (currentPath === '/') { // On new landing page, points to #join on the same page
+      return '#join';
     }
-    if (currentPath === '/about/our-vision') {
+    if (currentPath === '/about/our-vision') { // On vision page, points to #join on the same page
       return '#join';
     }
     // For pages like /about or /about/our-origin, link to the vision page's join section
@@ -141,6 +143,7 @@ export default function Navbar() {
               <nav className="flex flex-col space-y-1">
                 {navItems.map((item) => {
                   if ('isDropdown' in item && item.isDropdown) {
+                    // For mobile, flatten dropdowns.
                     return (
                       <React.Fragment key={item.name}>
                         {item.links.map(subItem => (
@@ -155,7 +158,7 @@ export default function Navbar() {
                         ))}
                       </React.Fragment>
                     );
-                  } else {
+                  } else { // Direct link like 'Features'
                     return (
                       <SheetClose asChild key={item.name}>
                         <Link
