@@ -23,7 +23,7 @@ import React, { useState, useEffect } from 'react';
 interface NavItemLink {
   name: string;
   href: string;
-  pageSpecific?: boolean; // For landing page section links or page-specific base paths
+  pageSpecific?: boolean;
 }
 
 interface NavItemGroup {
@@ -38,16 +38,11 @@ export default function Navbar() {
   const [currentPath, setCurrentPath] = useState('');
 
   useEffect(() => {
-    // This check runs only on the client-side
     setCurrentPath(window.location.pathname);
   }, []);
 
 
   const navItems: NavItem[] = [
-    { name: 'Mission', href: '#mission', pageSpecific: true }, // Points to #mission on /about/our-vision
-    { name: 'Problem', href: '#problem', pageSpecific: true }, // Points to #problem on /about/our-vision
-    { name: 'Solution', href: '#solution', pageSpecific: true }, // Points to #solution on /about/our-vision
-    { name: 'Features', href: '#features', pageSpecific: true }, // Points to #features on /about/our-vision
     {
       name: 'About',
       isDropdown: true,
@@ -61,15 +56,12 @@ export default function Navbar() {
 
   const getHref = (item: NavItemLink) => {
     if (item.pageSpecific) {
-      // If on the new landing page (/), section links should point to the detailed vision page
       if (currentPath === '/') {
         return `/about/our-vision${item.href}`;
       }
-      // If on the vision page itself, section links are direct hashes
       if (currentPath === '/about/our-vision') {
         return item.href;
       }
-      // Otherwise (e.g., on /about or /about/our-origin), also point to vision page sections
       return `/about/our-vision${item.href}`;
     }
     return item.href;
@@ -77,12 +69,13 @@ export default function Navbar() {
 
   const getJoinNowHref = () => {
     if (currentPath === '/') {
-      return '#join'; // Join section on new landing page
+      return '/about/our-vision#join';
     }
     if (currentPath === '/about/our-vision') {
-      return '#join'; // Join section on detailed vision page
+      return '#join';
     }
-    return '/about/our-vision#join'; // Default to join section on detailed vision page
+    // For pages like /about or /about/our-origin, link to the vision page's join section
+    return '/about/our-vision#join';
   }
 
   return (
@@ -148,11 +141,8 @@ export default function Navbar() {
               <nav className="flex flex-col space-y-1">
                 {navItems.map((item) => {
                   if ('isDropdown' in item && item.isDropdown) {
-                    // For mobile, list all dropdown items directly for easier tapping
                     return (
                       <React.Fragment key={item.name}>
-                        {/* Optional: Add a non-clickable header for the group */}
-                        {/* <p className="px-2 py-2 text-xs font-semibold uppercase text-muted-foreground">{item.name}</p> */}
                         {item.links.map(subItem => (
                           <SheetClose asChild key={subItem.name}>
                             <Link
