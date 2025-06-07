@@ -49,9 +49,9 @@ export default function Navbar() {
       name: 'About',
       isDropdown: true,
       links: [
+        { name: 'Our Vision', href: '/about/our-vision' },
         { name: 'About Us', href: '/about' },
         { name: 'Our Origin', href: '/about/our-origin' },
-        { name: 'Our Vision', href: '/about/our-vision' },
       ]
     },
   ];
