@@ -3,7 +3,7 @@ import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/landing/Footer';
 import { Separator } from '@/components/ui/separator';
 import SectionLayout from '@/components/ui/SectionLayout';
-import { Users, Sparkles, BookOpenText, HeartHandshake } from 'lucide-react';
+import { Users, Sparkles, BookOpenText, HeartHandshake, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function OurOriginPage() {
@@ -53,6 +53,10 @@ export default function OurOriginPage() {
                 </div>
                 <p className="text-foreground/90 leading-relaxed">
                   Castro, a regular at church functions, felt a persistent sense of disconnect despite years of shared pews. He realized that true faith wasn't merely belief, but "faith in action"—a commitment to charity and brotherly love. This conviction ignited a desire for a platform where he could actively serve his community, not just in grand gestures, but in understanding and addressing the everyday needs of the people around him. He sought a way for technology to facilitate these vital, on-the-ground connections that restore what makes life truly worth living.
+                </p>
+                <p className="text-foreground/80 leading-relaxed mt-4 flex items-center">
+                  <Mail className="mr-2 h-5 w-5 text-accent/80" />
+                  <a href="mailto:ErnieMakesStuff@gmail.com" className="text-accent hover:underline hover:text-accent/80 transition-colors">ErnieMakesStuff@gmail.com</a>
                 </p>
               </div>
             </div>
