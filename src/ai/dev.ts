@@ -1,1 +1,6 @@
-// Flows will be imported for their side effects in this file.
+import { config } from 'dotenv';
+config();
+
+import '@/ai/flows/ai-recommend-third-spaces.ts';
+import '@/ai/flows/ai-conversation-moderator.ts';
+import '@/ai/flows/ai-introductions.ts';

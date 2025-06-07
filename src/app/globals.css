@@ -8,73 +8,78 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --background: 33 43% 91.4%; /* Light Beige #F2EAE2 */
+    --foreground: 30 20% 25%; /* Dark Brown */
+    --card: 33 43% 91.4%; /* Same as background */
+    --card-foreground: 30 20% 25%; /* Same as foreground */
+    --popover: 33 43% 91.4%; /* Same as background */
+    --popover-foreground: 30 20% 25%; /* Same as foreground */
+    --primary: 158 37% 29.6%; /* Forest Green #306754 */
+    --primary-foreground: 0 0% 98%; /* Off-white */
+    --secondary: 33 35% 85%; /* Lighter Beige for secondary elements */
+    --secondary-foreground: 158 30% 25%; /* Darker Green for text on Lighter Beige */
+    --muted: 33 35% 95%; /* Even lighter beige */
+    --muted-foreground: 30 20% 50%; /* Softer brown for muted text */
+    --accent: 18 57.1% 44.7%; /* Terracotta #B35A31 */
+    --accent-foreground: 0 0% 98%; /* Off-white */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --border: 33 25% 80%; /* Desaturated, lighter beige for borders */
+    --input: 33 25% 80%; /* Desaturated, lighter beige for inputs */
+    --ring: 18 57.1% 44.7%; /* Accent color for rings */
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Sidebar Colors Adjusted to Theme */
+    --sidebar-background: 33 30% 88%; /* Slightly darker/desaturated beige */
+    --sidebar-foreground: 30 20% 25%; /* Main foreground */
+    --sidebar-primary: 158 37% 29.6%; /* Main primary - Forest Green */
+    --sidebar-primary-foreground: 0 0% 98%; /* Main primary-foreground */
+    --sidebar-accent: 33 40% 93%; /* Lighter beige, close to main background */
+    --sidebar-accent-foreground: 158 30% 25%; /* Darker green for text on light beige accent */
+    --sidebar-border: 33 20% 75%; /* Desaturated beige for border */
+    --sidebar-ring: 18 57.1% 44.7%; /* Main accent - Terracotta */
   }
+
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
+    /* Maintaining dark theme structure, but values should be adjusted if dark mode is a focus. For now, copying light theme values for consistency, assuming light theme is primary. */
+    --background: 30 10% 15%; /* Darker base for dark mode */
+    --foreground: 33 30% 88%; /* Light beige for text */
+    --card: 30 10% 15%;
+    --card-foreground: 33 30% 88%;
+    --popover: 30 10% 15%;
+    --popover-foreground: 33 30% 88%;
+    --primary: 158 37% 45%; /* Lighter Forest Green */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 30 15% 25%; /* Darker secondary */
+    --secondary-foreground: 33 30% 88%;
+    --muted: 30 15% 20%;
+    --muted-foreground: 33 25% 70%;
+    --accent: 18 57.1% 55%; /* Lighter Terracotta */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --border: 30 15% 30%;
+    --input: 30 15% 30%;
+    --ring: 18 57.1% 55%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --sidebar-background: 30 12% 20%;
+    --sidebar-foreground: 33 30% 88%;
+    --sidebar-primary: 158 37% 45%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 30 15% 28%;
+    --sidebar-accent-foreground: 33 30% 88%;
+    --sidebar-border: 30 15% 30%;
+    --sidebar-ring: 18 57.1% 55%;
   }
 }
 
