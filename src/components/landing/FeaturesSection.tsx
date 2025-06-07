@@ -1,6 +1,6 @@
 import SectionLayout from '@/components/ui/SectionLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Handshake, ShieldCheck, ClipboardList, Target, UsersRound, BotMessageSquare } from 'lucide-react'; // Added BotMessageSquare for AI
+import { Handshake, ShieldCheck, ClipboardList, Target, UsersRound, BotMessageSquare } from 'lucide-react';
 
 interface Feature {
   icon: JSX.Element;
@@ -46,7 +46,7 @@ export default function FeaturesSection() {
     <SectionLayout id="features" bgColor="bg-primary/5">
       <div className="text-center">
         <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-          How Third Space Connector Works
+          How Heyesa Works
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-foreground/80">
           We provide the tools to help you build meaningful, local connections.

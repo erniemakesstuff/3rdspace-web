@@ -12,7 +12,7 @@ export default function MonetizationSection() {
           Our Approach to Sustainability
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-foreground/90">
-          To support our mission of building thriving communities, Third Space Connector will explore ethical and non-intrusive ways to sustain the platform.
+          To support our mission of building thriving communities, Heyesa will explore ethical and non-intrusive ways to sustain the platform.
         </p>
         <p className="mt-4 text-lg leading-relaxed text-foreground/90">
           One potential avenue is through AI-recommended advertisement placements. Our AI, acting as a helpful "mutual friend," may occasionally suggest relevant paid products or services that align with user discussions and needs, much like a trusted friend might recommend something useful. We are committed to ensuring that any monetization strategy enhances, rather than detracts from, the core experience of community building and respects user privacy. 74% of shoppers indicate word-of-mouth plays a major factor in their purchasing decisions, and we aim for our AI's suggestions to feel like a natural part of helpful guidance.

@@ -10,7 +10,7 @@ export default function CallToActionSection() {
           Ready to Build Real Connections?
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-foreground/90 md:text-xl">
-          Join Third Space Connector today and start making a difference in your community. Offer your skills, find support for your needs, and connect with like-minded individuals in your favorite local spots.
+          Join Heyesa today and start making a difference in your community. Offer your skills, find support for your needs, and connect with like-minded individuals in your favorite local spots.
         </p>
         <div className="mt-10">
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-10 py-6 shadow-xl transform transition-transform duration-200 hover:scale-105">

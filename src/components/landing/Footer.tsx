@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
         <Separator className="my-8 bg-border/60" />
         <div className="text-center text-sm text-foreground/60">
-          &copy; {new Date().getFullYear()} Third Space Connector. All rights reserved.
+          &copy; {new Date().getFullYear()} Heyesa. All rights reserved.
         </div>
       </div>
     </footer>

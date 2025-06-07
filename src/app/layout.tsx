@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Third Space Connector',
-  description: 'Building community and addressing social isolation through meaningful connections in third spaces.',
+  title: 'Heyesa',
+  description: 'Heyesa: Fostering abundance in community and connection.',
 };
 
 export default function RootLayout({

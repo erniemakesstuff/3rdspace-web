@@ -21,7 +21,7 @@ export default function DifferentiationSection() {
             What Makes Us Different?
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-foreground/90">
-            We're not just another social app. Third Space Connector is built on a foundation of fostering genuine, local community and meaningful interactions.
+            We're not just another social app. Heyesa is built on a foundation of fostering genuine, local community and meaningful interactions.
           </p>
           <ul className="mt-8 space-y-4">
             {points.map((point, index) => (
