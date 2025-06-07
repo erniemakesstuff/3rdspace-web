@@ -23,7 +23,7 @@ import React, { useState, useEffect } from 'react';
 interface NavItemLink {
   name: string;
   href: string;
-  pageSpecific?: boolean;
+  pageSpecific?: boolean; // True if it's a section link on a specific page
 }
 
 interface NavItemGroup {
@@ -36,6 +36,7 @@ type NavItem = NavItemLink | NavItemGroup;
 
 export default function Navbar() {
   const [currentPath, setCurrentPath] = useState('');
+  const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdiULMdn2EE6n8BZjejdhUcLa3xrrEe2gJoQ-fY-4nbBBMHBg/viewform?usp=header";
 
   useEffect(() => {
     setCurrentPath(window.location.pathname);
@@ -55,29 +56,27 @@ export default function Navbar() {
     },
   ];
 
+  // Determines the href for navigation items, especially for section links
   const getHref = (item: NavItemLink) => {
-    if (item.pageSpecific) {
-      if (currentPath === '/') { // When on new landing page
+    if (item.pageSpecific) { // For links like '#features'
+      if (currentPath === '/') { // When on new landing page (src/app/page.tsx)
+        // The new landing page doesn't have these sections directly.
+        // So, we point to the "Our Vision" page's sections.
         return `/about/our-vision${item.href}`;
       }
       if (currentPath === '/about/our-vision') { // When on the vision page itself
-        return item.href;
+        return item.href; // Direct section link like '#features'
       }
-      // For other pages like /about, /about/our-origin, link to the vision page's section
+      // For other pages (e.g., /about, /about/our-origin), also point to vision page's sections
       return `/about/our-vision${item.href}`;
     }
+    // For non-page-specific links (like /about, /about/our-origin)
     return item.href;
   };
 
+  // "Join Now" button always points to the Google Form
   const getJoinNowHref = () => {
-    if (currentPath === '/') { // On new landing page, points to #join on the same page
-      return '#join';
-    }
-    if (currentPath === '/about/our-vision') { // On vision page, points to #join on the same page
-      return '#join';
-    }
-    // For pages like /about or /about/our-origin, link to the vision page's join section
-    return '/about/our-vision#join';
+    return googleFormUrl;
   }
 
   return (

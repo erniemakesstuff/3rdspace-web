@@ -1,8 +1,10 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import SectionLayout from '@/components/ui/SectionLayout';
 
 export default function CallToActionSection() {
+  const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdiULMdn2EE6n8BZjejdhUcLa3xrrEe2gJoQ-fY-4nbBBMHBg/viewform?usp=header";
   return (
     <SectionLayout id="join" className="bg-gradient-to-b from-primary/5 to-background">
       <div className="mx-auto max-w-3xl text-center">
@@ -14,7 +16,7 @@ export default function CallToActionSection() {
         </p>
         <div className="mt-10">
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-10 py-6 shadow-xl transform transition-transform duration-200 hover:scale-105">
-            <Link href="#">Get Started Now</Link>
+            <Link href={googleFormUrl}>Get Started Now</Link>
           </Button>
         </div>
         <p className="mt-6 text-sm text-foreground/70">

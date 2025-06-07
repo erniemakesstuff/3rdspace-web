@@ -1,9 +1,11 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import SectionLayout from '@/components/ui/SectionLayout';
 
 export default function HeroSection() {
+  const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdiULMdn2EE6n8BZjejdhUcLa3xrrEe2gJoQ-fY-4nbBBMHBg/viewform?usp=header";
   return (
     <SectionLayout id="hero" className="pt-24 md:pt-32 lg:pt-40 bg-gradient-to-b from-background to-primary/5">
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
@@ -16,7 +18,7 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">
-              <Link href="#join">Join Our Community</Link>
+              <Link href={googleFormUrl}>Join Our Community</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-primary/50 text-primary hover:bg-primary/10 shadow-lg">
               <Link href="#mission">Learn More</Link>

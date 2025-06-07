@@ -27,6 +27,8 @@ export default function NewLandingPage() {
     },
   ];
 
+  const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdiULMdn2EE6n8BZjejdhUcLa3xrrEe2gJoQ-fY-4nbBBMHBg/viewform?usp=header";
+
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Navbar />
@@ -43,8 +45,7 @@ export default function NewLandingPage() {
               </p>
               <div className="flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">
-                  {/* Pointing to the join section on the detailed vision page for now */}
-                  <Link href="/about/our-vision#join">Join Heyesa</Link>
+                  <Link href={googleFormUrl}>Join Heyesa</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-primary/50 text-primary hover:bg-primary/10 shadow-lg">
                   <Link href="/about/our-vision">See Our Vision</Link>
@@ -121,7 +122,7 @@ export default function NewLandingPage() {
           </div>
           <div className="mt-12 text-center">
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-               <Link href="/about/our-vision#join">Start Building Your Community</Link>
+               <Link href={googleFormUrl}>Start Building Your Community</Link>
             </Button>
           </div>
         </SectionLayout>
@@ -141,8 +142,7 @@ export default function NewLandingPage() {
               </p>
               <div className="mt-10">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-10 py-6 shadow-xl transform transition-transform duration-200 hover:scale-105">
-                  {/* This button in the "join" section of the new landing page might eventually point to /signup */}
-                  <Link href="/about/our-vision#join">Join Heyesa Today</Link>
+                  <Link href={googleFormUrl}>Join Heyesa Today</Link>
                 </Button>
               </div>
             </div>
