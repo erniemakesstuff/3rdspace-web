@@ -28,7 +28,7 @@ const howToSteps: HowToStep[] = [
     number: 2,
     icon: <MapPin className="h-8 w-8 text-primary" />,
     title: "Connect in Your Local Hubs",
-    description: "We don't want to keep you on the app. We want you in the world, in the communities around you. Heyesa focuses on granular locations like your favorite coffee shops, community centers, and parks.",
+    description: "We don't want to keep you on the app; we want you out in the world, active in your local communities. Heyesa uses your real-world location and the places you frequent—like coffee shops, community centers, and parks—to drive connections, not just interactions while you're sitting at home.",
     imageUrl: "https://placehold.co/600x400.png",
     imageAlt: "Illustration of a map pointing to local community spots",
     imageHint: "local map community",
