@@ -135,13 +135,19 @@ export default function AboutUsPage() {
             <h2 className="font-headline text-3xl font-bold text-primary mb-6 sm:text-4xl text-center">Who We Are</h2>
             <div className="max-w-3xl mx-auto space-y-4 text-lg text-foreground/90 leading-relaxed">
               <p>
-                Heyesa is brought to life by a dedicated team of thinkers, creators, and community advocates who believe in the power of technology to foster genuine human connection. We are developers, designers, and visionaries united by a common goal: to build a platform that strengthens local communities and combats social isolation.
+                Heyesa was founded by <strong>Mark</strong>, a software engineer who envisioned a world where technology could mend social isolation rather than deepen it. Driven by his experiences with community and the power of selfless contribution, he set out to build a platform that prioritizes genuine human connection.
               </p>
+              <p>Joining him is a dedicated team of thinkers and creators:</p>
+              <ul className="list-disc pl-6 space-y-3 mt-4 text-foreground/80">
+                  <li>
+                    <strong>John</strong>, a passionate community organizer, brings his expertise in grassroots movements and social cohesion to help shape Heyesa's community-first approach.
+                  </li>
+                  <li>
+                    <strong>Nora</strong>, a talented software engineer based in Seattle, WA, is committed to building ethical, human-centered technology that fosters authentic relationships and strengthens local bonds.
+                  </li>
+              </ul>
               <p>
-                Our backgrounds are diverse, but our commitment is singular: to create tools that serve humanity, prioritizing well-being over metrics and meaningful interactions over fleeting engagement. We're passionate about building a future where technology supports authentic relationships and helps people thrive together.
-              </p>
-              <p>
-                (More detailed team information and individual profiles can be added here as your project grows!)
+                Together, we are united by a common goal: to create tools that serve humanity, prioritizing well-being over metrics and meaningful interactions over fleeting engagement.
               </p>
             </div>
           </section>

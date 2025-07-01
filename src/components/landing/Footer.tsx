@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Logo from '@/components/icons/Logo';
 import { Separator } from '@/components/ui/separator';
-import { Mail, Facebook } from 'lucide-react';
+import { Facebook } from 'lucide-react';
 
 export default function Footer() {
   const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdiULMdn2EE6n8BZjejdhUcLa3xrrEe2gJoQ-fY-4nbBBMHBg/viewform?usp=header";
@@ -30,12 +30,6 @@ export default function Footer() {
           <div>
             <h3 className="mb-3 font-headline text-lg font-semibold text-primary">Connect With Us</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a href="mailto:ErnieMakesStuff@gmail.com" className="flex items-center text-foreground/70 hover:text-primary">
-                  <Mail className="mr-2 h-4 w-4" />
-                  ErnieMakesStuff@gmail.com
-                </a>
-              </li>
               <li>
                 <a href="https://www.facebook.com/markbrannan" target="_blank" rel="noopener noreferrer" className="flex items-center text-foreground/70 hover:text-primary">
                   <Facebook className="mr-2 h-4 w-4" />
