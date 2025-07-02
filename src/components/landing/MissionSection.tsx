@@ -1,3 +1,4 @@
+
 import SectionLayout from '@/components/ui/SectionLayout';
 import Image from 'next/image';
 
@@ -27,7 +28,7 @@ export default function MissionSection() {
         </div>
         <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-xl">
             <Image
-              src="https://placehold.co/600x450.png"
+              src="https://truevine-media-storage.s3.us-west-2.amazonaws.com/3rd_feature_c2.png"
               alt="Diverse group of people collaborating"
               layout="fill"
               objectFit="cover"

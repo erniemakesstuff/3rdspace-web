@@ -54,7 +54,7 @@ export default function NewLandingPage() {
             </div>
             <div className="relative aspect-video overflow-hidden rounded-xl shadow-2xl">
               <Image
-                src="https://placehold.co/1200x675.png"
+                src="https://truevine-media-storage.s3.us-west-2.amazonaws.com/3rd_c1.png"
                 alt="Diverse group of friends connecting and smiling in a bright, welcoming community space"
                 layout="fill"
                 objectFit="cover"
@@ -70,7 +70,7 @@ export default function NewLandingPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="relative aspect-[4/3] order-last lg:order-none overflow-hidden rounded-xl shadow-xl">
               <Image
-                src="https://placehold.co/600x450.png"
+                src="https://truevine-media-storage.s3.us-west-2.amazonaws.com/3rd_c2.png"
                 alt="Silhouette of a person looking at a screen, feeling isolated"
                 layout="fill"
                 objectFit="cover"
@@ -148,7 +148,7 @@ export default function NewLandingPage() {
             </div>
              <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-xl">
               <Image
-                src="https://placehold.co/600x450.png"
+                src="https://truevine-media-storage.s3.us-west-2.amazonaws.com/3rd_c3.png"
                 alt="Joyful diverse group of people celebrating community and connection"
                 layout="fill"
                 objectFit="cover"

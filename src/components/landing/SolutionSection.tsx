@@ -1,3 +1,4 @@
+
 import SectionLayout from '@/components/ui/SectionLayout';
 import Image from 'next/image';
 
@@ -7,7 +8,7 @@ export default function SolutionSection() {
       <div className="grid items-center gap-12 lg:grid-cols-2">
          <div className="relative order-last lg:order-first aspect-[4/3] overflow-hidden rounded-xl shadow-xl">
             <Image
-              src="https://placehold.co/600x450.png"
+              src="https://truevine-media-storage.s3.us-west-2.amazonaws.com/3rd_feature_c3.png"
               alt="Friends meeting in a park"
               layout="fill"
               objectFit="cover"

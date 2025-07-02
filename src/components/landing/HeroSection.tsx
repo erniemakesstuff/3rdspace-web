@@ -27,7 +27,7 @@ export default function HeroSection() {
         </div>
         <div className="relative aspect-video overflow-hidden rounded-xl shadow-2xl">
           <Image
-            src="https://placehold.co/1200x675.png"
+            src="https://truevine-media-storage.s3.us-west-2.amazonaws.com/3rd_feature_c1.png"
             alt="People connecting in a community space"
             layout="fill"
             objectFit="cover"
