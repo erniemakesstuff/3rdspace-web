@@ -2,14 +2,14 @@
 "use client";
 
 import { useEffect } from 'react';
-import { clarity } from '@microsoft/clarity';
+import { init as clarityInit } from '@microsoft/clarity';
 
 const CLARITY_PROJECT_ID = "s0grazgx09";
 
 export default function ClarityScript() {
   useEffect(() => {
     if (process.env.NODE_ENV === 'production' && CLARITY_PROJECT_ID) {
-      clarity.init(CLARITY_PROJECT_ID);
+      clarityInit(CLARITY_PROJECT_ID);
     }
   }, []);
 
